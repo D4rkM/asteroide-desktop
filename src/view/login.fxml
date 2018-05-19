@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="520.0" maxWidth="870.0" minHeight="520.0" minWidth="870.0" prefHeight="520.0" prefWidth="870.0" style="-fx-background-color: #1f405e;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="520.0" fitWidth="580.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../../../Desktop/busasteroide.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="598.0" layoutY="58.0" prefHeight="43.0" prefWidth="180.0" text="Acesso" textFill="#e1e1e1">
+         <font>
+            <Font name="Candara Bold" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="616.0" layoutY="148.0" text="Login" textFill="#67798a">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="616.0" layoutY="214.0" text="Senha" textFill="#67798a">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField layoutX="616.0" layoutY="168.0" prefHeight="25.0" prefWidth="180.0" />
+      <TextField layoutX="616.0" layoutY="235.0" prefHeight="25.0" prefWidth="180.0" style="-fx-background-color: #;" />
+      <Button id="btn_entrar" layoutX="717.0" layoutY="283.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="79.0" style="-fx-background-color: #458665;" text="LOGIN" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label layoutX="763.0" layoutY="498.0" text="00:00 00/00/0000" textFill="WHITE" />
+   </children>
+</AnchorPane>

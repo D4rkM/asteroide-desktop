@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="381.0" maxWidth="635.0" minHeight="300.0" minWidth="300.0" prefHeight="300.0" prefWidth="500.0" style="-fx-background-color: #1f405e;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CadastroTipoFreio">
+   <children>
+      <Label layoutX="152.0" layoutY="14.0" text="Cadastro de freio" textFill="#ededed">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="208.0" layoutY="103.0" text="Tipo do freio" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button layoutX="227.0" layoutY="185.0" mnemonicParsing="false" onAction="#inserir" text="Inserir" />
+      <TextField fx:id="txtFreio" layoutX="165.0" layoutY="136.0" prefHeight="25.0" prefWidth="173.0" />
+   </children>
+</AnchorPane>

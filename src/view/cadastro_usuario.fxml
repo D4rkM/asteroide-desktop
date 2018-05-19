@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="811.0" maxWidth="1251.0" minHeight="300.0" minWidth="300.0" style="-fx-background-color: #1f405e;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="494.0" layoutY="14.0" text="Cadastro de clientes" textFill="#ededed">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Separator layoutY="60.0" prefWidth="1251.0" style="-fx-background-color: #1f405e;" />
+      <ImageView fitHeight="46.0" fitWidth="84.0" layoutX="1191.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../Desktop/lembrete.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="46.0" fitWidth="57.0" layoutX="29.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../Desktop/DH3cp6zWAAQCRbv.png" />
+         </image>
+      </ImageView>
+      <Separator layoutX="1.0" layoutY="757.0" prefHeight="0.0" prefWidth="1251.0" />
+      <Label layoutX="579.0" layoutY="770.0" text="Bem vindo, usuario" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="1067.0" layoutY="770.0" text="00:00 hrs xx/xx/xxxx " textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="238.0" layoutY="131.0" text="Nome completo:" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField layoutX="238.0" layoutY="165.0" prefHeight="25.0" prefWidth="371.0" promptText="Digite seu nome . . ." />
+      <TextField layoutX="655.0" layoutY="165.0" prefHeight="25.0" prefWidth="352.0" promptText="Digite seu email . . ." />
+      <Label layoutX="661.0" layoutY="131.0" text="Email:" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField layoutX="238.0" layoutY="242.0" prefHeight="25.0" prefWidth="170.0" promptText="(XX)XXXX-XXXX" />
+      <Label layoutX="238.0" layoutY="208.0" text="Telefone:" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="439.0" layoutY="208.0" text="Celular:" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField layoutX="439.0" layoutY="242.0" prefHeight="25.0" prefWidth="170.0" promptText="(XX)XXXX-XXXX" />
+      <TextField layoutX="627.0" layoutY="242.0" prefHeight="25.0" prefWidth="170.0" promptText="(XX)XXXX-XXXX" />
+      <Label layoutX="626.0" layoutY="208.0" text="Recado:" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="831.0" layoutY="214.0" text="CEP:" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField layoutX="831.0" layoutY="242.0" prefHeight="25.0" prefWidth="170.0" />
+      <Label layoutX="238.0" layoutY="275.0" text="Cidade:" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField layoutX="238.0" layoutY="309.0" prefHeight="25.0" prefWidth="214.0" promptText="Digite sua cidade . . ." />
+      <TextField layoutX="477.0" layoutY="309.0" prefHeight="25.0" prefWidth="134.0" promptText="Digite seu numero. . ." />
+      <Label layoutX="477.0" layoutY="275.0" text="Numero:" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField layoutX="661.0" layoutY="309.0" prefHeight="25.0" prefWidth="273.0" promptText="Digite seu complemento . . ." />
+      <Label layoutX="662.0" layoutY="275.0" text="Complemento:" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField layoutX="237.0" layoutY="380.0" prefHeight="25.0" prefWidth="343.0" promptText="DIgite seu endereço . . ." />
+      <Label layoutX="236.0" layoutY="351.0" text="Endereço:" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <CheckBox layoutX="625.0" layoutY="352.0" mnemonicParsing="false" text="Deficiente" textFill="#fff9f9" />
+      <ComboBox layoutX="627.0" layoutY="380.0" prefHeight="25.0" prefWidth="241.0" />
+      <ImageView fitHeight="154.0" fitWidth="153.0" layoutX="1067.0" layoutY="144.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../Desktop/download.jpg" />
+         </image>
+      </ImageView>
+      <Button layoutX="1079.0" layoutY="304.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="104.0" text="Buscar imagem" />
+      <Label layoutX="938.0" layoutY="351.0" text="Sexo:" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <CheckBox layoutX="917.0" layoutY="382.0" mnemonicParsing="false" text="Masculino" textFill="#fff9f9" />
+      <CheckBox layoutX="1001.0" layoutY="382.0" mnemonicParsing="false" text="Feminino" textFill="#fff9f9" />
+      <Button layoutX="534.0" layoutY="451.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="154.0" text="Inserir" />
+      <Accordion layoutX="1.0" layoutY="65.0" prefHeight="200.0" style="-fx-background-color: #1f405e;">
+        <panes>
+            <TitledPane animated="false" prefHeight="100.0" style="-fx-background-color: #ffffff;" text="Controle de Frotas">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox prefWidth="202.0">
+                           <children>
+                              <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="204.0" text="Cadastrar onibus" />
+                              <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="201.0" text="Cadastrar classe" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </TitledPane>
+          <TitledPane animated="false" prefHeight="100.0" text="Controle de manutenção">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox prefHeight="181.0" prefWidth="202.0">
+                           <children>
+                              <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="219.0" text="Onibus em manutenção" />
+                              <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="224.0" text="Cadastrar freio" />
+                           </children>
+                        </VBox>
+                     </children></AnchorPane>
+            </content>
+          </TitledPane>
+          <TitledPane animated="false" prefHeight="100.0" text="Controle financeiro">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="202.0">
+                           <children>
+                              <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="205.0" text="Graficos" />
+                              <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="214.0" text="Gastos" />
+                           </children>
+                        </VBox>
+                     </children></AnchorPane>
+            </content>
+          </TitledPane>
+          <TitledPane animated="false" prefHeight="100.0" text="Controle de RH">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox prefWidth="202.0">
+                           <children>
+                              <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="203.0" text="Cadastrar funcionarios" />
+                              <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="219.0" text="Cadastro de clientes" />
+                           </children>
+                        </VBox>
+                     </children></AnchorPane>
+            </content>
+          </TitledPane>
+        </panes>
+      </Accordion>
+   </children>
+</AnchorPane>

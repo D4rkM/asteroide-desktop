@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="381.0" maxWidth="635.0" minHeight="300.0" minWidth="300.0" prefHeight="300.0" prefWidth="500.0" style="-fx-background-color: #1f405e;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="152.0" layoutY="14.0" text="Cadastro de marcas" textFill="#ededed">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="220.0" layoutY="102.0" text="Marcas" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="215.0" layoutY="181.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="68.0" text="Inserir" />
+      <TextField layoutX="165.0" layoutY="136.0" prefHeight="25.0" prefWidth="173.0" promptText="Cadastre as marcas" />
+   </children>
+</AnchorPane>

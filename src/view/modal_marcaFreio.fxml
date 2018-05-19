@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="381.0" maxWidth="635.0" minHeight="300.0" minWidth="300.0" prefHeight="358.0" prefWidth="500.0" style="-fx-background-color: #1f405e;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="152.0" layoutY="14.0" text="Cadastro de freio" textFill="#ededed">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="175.0" layoutY="151.0" text="Quantidade em estoque" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button layoutX="203.0" layoutY="302.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="95.0" text="Inserir" />
+      <TextField layoutX="165.0" layoutY="179.0" prefHeight="25.0" prefWidth="173.0" promptText="Quantidade" />
+      <Label layoutX="199.0" layoutY="70.0" text="Marca do freio">
+         <textFill>
+            <LinearGradient endX="0.9904761904761905" startX="1.0" startY="1.0">
+               <stops>
+                  <Stop color="#ffffff3f" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ComboBox layoutX="165.0" layoutY="102.0" prefHeight="25.0" prefWidth="173.0" />
+      <Label layoutX="209.0" layoutY="216.0" text="Tipo do freio">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="0.9904761904761905" startX="1.0" startY="1.0">
+               <stops>
+                  <Stop color="#ffffff3f" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <ComboBox layoutX="166.0" layoutY="246.0" prefHeight="25.0" prefWidth="173.0" />
+   </children>
+</AnchorPane>
