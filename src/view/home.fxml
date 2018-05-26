@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.image.*?>
-<?import javafx.scene.shape.*?>
-<?import javafx.scene.paint.*?>
-<?import javafx.scene.text.*?>
-<?import javafx.scene.control.*?>
-<?import java.lang.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="811.0" maxWidth="1251.0" minHeight="300.0" minWidth="300.0" prefHeight="811.0" prefWidth="1251.0" style="-fx-background-color: #1f405e;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.Main">
+<AnchorPane minHeight="300.0" minWidth="300.0" prefHeight="811.0" prefWidth="1251.0" style="-fx-background-color: #1f405e;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.HomeController">
    <children>
       <Label layoutX="577.0" layoutY="14.0" text="Página Principal" textFill="#ededed">
          <font>
@@ -22,15 +25,33 @@
             <Image url="@../../../../../../Desktop/lembrete.png" />
          </image>
       </ImageView>
-      <Accordion layoutX="1.0" layoutY="73.0" prefHeight="200.0" style="-fx-background-color: #1f405e;">
+      <Accordion layoutX="1.0" layoutY="73.0" prefWidth="202.0" style="-fx-background-color: #1f405e;">
         <panes>
-            <TitledPane animated="false" prefHeight="100.0" style="-fx-background-color: #ffffff;" text="Controle de Frotas">
-              <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+          <TitledPane animated="false" prefHeight="200.0" prefWidth="202.0" text="Controle de manutenção">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="174.0" prefWidth="200.0" style="-fx-background-color: #1f405e;">
                      <children>
                         <VBox prefWidth="202.0">
                            <children>
-                              <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="204.0" text="Cadastrar onibus" />
+                              <Button mnemonicParsing="false" onMouseClicked="#chama1" prefHeight="25.0" prefWidth="219.0" text="Lista tipo oleo" />
+                              <Button mnemonicParsing="false" onMouseClicked="#chama2" prefHeight="25.0" prefWidth="224.0" text="Lista tipo pneu" />
+                              <Button mnemonicParsing="false" onMouseClicked="#chama3" prefHeight="25.0" prefWidth="203.0" text="Lista tipo freio" />
+                              <Button mnemonicParsing="false" onMouseClicked="#chama4" prefHeight="18.0" prefWidth="202.0" text="Lista de marca oleo" />
+                              <Button mnemonicParsing="false" onMouseClicked="#chama5" prefHeight="25.0" prefWidth="203.0" text="Lista de marca pneu" />
+                              <Button mnemonicParsing="false" onMouseClicked="#chama6" prefHeight="25.0" prefWidth="202.0" text="Lista de marca freio" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </TitledPane>
+            <TitledPane animated="false" style="-fx-background-color: #ffffff;" text="Controle de Frotas">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefWidth="200.0">
+                     <children>
+                        <VBox>
+                           <children>
+                              <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="204.0" text="Lista de onibus" />
                               <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="201.0" text="Cadastrar classe" />
                            </children>
                         </VBox>
@@ -38,17 +59,18 @@
                   </AnchorPane>
               </content>
             </TitledPane>
-          <TitledPane animated="false" prefHeight="100.0" text="Controle de manutenção">
+          <TitledPane animated="false" prefHeight="100.0" text="Controle de RH">
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <VBox prefHeight="181.0" prefWidth="202.0">
+                        <VBox prefWidth="202.0">
                            <children>
-                              <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="219.0" text="Onibus em manutenção" />
-                              <Button mnemonicParsing="false" onAction="#tipoFreio" prefHeight="25.0" prefWidth="224.0" text="Cadastrar freio" />
+                              <Button mnemonicParsing="false" onMouseClicked="#chama7" prefHeight="25.0" prefWidth="203.0" text="Lista de funcionarios" />
+                              <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="219.0" text="Cadastro de clientes" />
                            </children>
                         </VBox>
-                     </children></AnchorPane>
+                     </children>
+                  </AnchorPane>
             </content>
           </TitledPane>
           <TitledPane animated="false" prefHeight="100.0" text="Controle financeiro">
@@ -61,20 +83,8 @@
                               <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="214.0" text="Gastos" />
                            </children>
                         </VBox>
-                     </children></AnchorPane>
-            </content>
-          </TitledPane>
-          <TitledPane animated="false" prefHeight="100.0" text="Controle de RH">
-            <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                     <children>
-                        <VBox prefWidth="202.0">
-                           <children>
-                              <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="203.0" text="Cadastrar funcionarios" />
-                              <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="219.0" text="Cadastro de clientes" />
-                           </children>
-                        </VBox>
-                     </children></AnchorPane>
+                     </children>
+                  </AnchorPane>
             </content>
           </TitledPane>
         </panes>
@@ -90,5 +100,6 @@
             <Font size="18.0" />
          </font>
       </Label>
+      <BorderPane fx:id="borderPane" layoutX="245.0" layoutY="107.0" prefHeight="597.0" prefWidth="965.0" />
    </children>
 </AnchorPane>

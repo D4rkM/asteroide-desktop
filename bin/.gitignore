@@ -1,4 +1,6 @@
-/models/
-/imagens/
-/controller/
 /view/
+/application/
+/controller/
+/imagens/
+/models/
+/lista_classes.fxml

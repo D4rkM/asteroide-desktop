@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="300.0" minWidth="300.0" prefHeight="600.0" prefWidth="836.0" style="-fx-background-color: #1f405e;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.VisualizarTipoOleo">
+   <children>
+      <Button layoutX="232.0" layoutY="555.0" mnemonicParsing="false" onAction="#cadastrar" prefHeight="25.0" prefWidth="75.0" text="Cadastrar" />
+      <Button layoutX="470.0" layoutY="555.0" mnemonicParsing="false" onAction="#deletarTipoOleo" text="Deletar" />
+      <TableView fx:id="tblTipoOleo" layoutX="232.0" layoutY="92.0" prefHeight="450.0" prefWidth="373.0">
+        <columns>
+            <TableColumn fx:id="colunaID" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="colunaTipoOleo" prefWidth="295.0" text="Tipo " />
+        </columns>
+      </TableView>
+      <Button layoutX="542.0" layoutY="555.0" mnemonicParsing="false" onAction="#atualizar" text="Atualizar" />
+      <Label layoutX="283.0" layoutY="28.0" text="Lista de tipos de Óleos" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Book Antiqua" size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -14,11 +14,11 @@ import javafx.stage.Stage;
 import models.CadastroDAO;
 import view.Main;
 
-public class Visualizar {
+public class VisualizarMarcaPneu {
 
 	@FXML TableColumn colunaID;
-	@FXML TableColumn colunaTipoFreio;
-	@FXML TableView tblTipoFreio;
+	@FXML TableColumn colunaMarcaPneu;
+	@FXML TableView tblMarcaPneu;
 
 	CadastroDAO dao;
 
@@ -26,27 +26,27 @@ public class Visualizar {
 
 	dao = new CadastroDAO();
 
-	colunaID.setCellValueFactory(new PropertyValueFactory<TipoFreio, Integer>("id"));
-	colunaTipoFreio.setCellValueFactory(new PropertyValueFactory<TipoFreio, String>("txtfreio"));
+	colunaID.setCellValueFactory(new PropertyValueFactory<MarcaPneu, Integer>("id"));
+	colunaMarcaPneu.setCellValueFactory(new PropertyValueFactory<MarcaPneu, String>("MarcaPneu"));
 
-	ArrayList<TipoFreio> lstTipoFreio = dao.obterTodos();
+	ArrayList<MarcaPneu> lstMarcaPneu = dao.obterTodos5();
 
-	tblTipoFreio.setItems(FXCollections.observableArrayList(lstTipoFreio));
+	tblMarcaPneu.setItems(FXCollections.observableArrayList(lstMarcaPneu));
 
 	System.out.println("Inicialização");
 
 	}
 
 
-	@FXML public void deletar () {
-		TipoFreio f = (TipoFreio)tblTipoFreio.getSelectionModel().getSelectedItem();
-		dao.deletar(f.getId());
+	@FXML public void deletarMarcaPneu () {
+		MarcaPneu p = (MarcaPneu)tblMarcaPneu.getSelectionModel().getSelectedItem();
+		dao.deletarMarcaPneu(p.getId());
 
-		tblTipoFreio.getItems().remove(f);
+		tblMarcaPneu.getItems().remove(p);
 	}
 
-	@FXML public void atualizar() {
-		TipoFreio f = (TipoFreio)tblTipoFreio.getSelectionModel().getSelectedItem();
+	@FXML public void atualizarMarcaPneu() {
+		MarcaPneu p = (MarcaPneu)tblMarcaPneu.getSelectionModel().getSelectedItem();
 
 
 		//Main.abrirTela2("lista_tipoFreio");
@@ -57,15 +57,15 @@ public class Visualizar {
 
 		try{
 
-			FXMLLoader loader = new FXMLLoader(Main.class.getResource("modal_tipoFreio.fxml"));
+			FXMLLoader loader = new FXMLLoader(Main.class.getResource("modal_marcaPneu.fxml"));
 
 
 			//carregar o arquivo XML
 			tela = loader.load();
 
 
-			CadastroTipoFreio controller = new CadastroTipoFreio();
-			controller.tipoFreioAtualizar=f;
+			CadastroMarcaPneu controller = new CadastroMarcaPneu();
+			controller.marcaPneuAtualizar=p;
 
 			loader.setController(controller);
 
@@ -81,9 +81,10 @@ public class Visualizar {
 			ex.printStackTrace();
 		}
 
+
 	}
 
-	@FXML public void cadastrar() {
+	@FXML public void cadastrarMarcaPneu() {
 
 		Stage primaryStage = new Stage();
 		//Abrir tela:
@@ -92,7 +93,7 @@ public class Visualizar {
 		try{
 
 			//carregar o arquivo XML
-			tela = FXMLLoader.load(Main.class.getResource("modal_tipoFreio.fxml"));
+			tela = FXMLLoader.load(Main.class.getResource("modal_marcaPneu.fxml"));
 
 			//Criando a cena
 			Scene sc = new Scene(tela);

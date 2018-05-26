@@ -14,11 +14,11 @@ import javafx.stage.Stage;
 import models.CadastroDAO;
 import view.Main;
 
-public class Visualizar {
+public class VisualizarMarcaFreio {
 
 	@FXML TableColumn colunaID;
-	@FXML TableColumn colunaTipoFreio;
-	@FXML TableView tblTipoFreio;
+	@FXML TableColumn colunaMarcaFreio;
+	@FXML TableView tblMarcaFreio;
 
 	CadastroDAO dao;
 
@@ -26,27 +26,27 @@ public class Visualizar {
 
 	dao = new CadastroDAO();
 
-	colunaID.setCellValueFactory(new PropertyValueFactory<TipoFreio, Integer>("id"));
-	colunaTipoFreio.setCellValueFactory(new PropertyValueFactory<TipoFreio, String>("txtfreio"));
+	colunaID.setCellValueFactory(new PropertyValueFactory<MarcaFreio, Integer>("id"));
+	colunaMarcaFreio.setCellValueFactory(new PropertyValueFactory<MarcaFreio, String>("MarcaFreio"));
 
-	ArrayList<TipoFreio> lstTipoFreio = dao.obterTodos();
+	ArrayList<MarcaFreio> lstMarcaFreio = dao.obterTodos3();
 
-	tblTipoFreio.setItems(FXCollections.observableArrayList(lstTipoFreio));
+	tblMarcaFreio.setItems(FXCollections.observableArrayList(lstMarcaFreio));
 
 	System.out.println("Inicialização");
 
 	}
 
 
-	@FXML public void deletar () {
-		TipoFreio f = (TipoFreio)tblTipoFreio.getSelectionModel().getSelectedItem();
-		dao.deletar(f.getId());
+	@FXML public void deletarMarcaFreio () {
+		MarcaFreio m = (MarcaFreio)tblMarcaFreio.getSelectionModel().getSelectedItem();
+		dao.deletarMarcaFreio(m.getId());
 
-		tblTipoFreio.getItems().remove(f);
+		tblMarcaFreio.getItems().remove(m);
 	}
 
-	@FXML public void atualizar() {
-		TipoFreio f = (TipoFreio)tblTipoFreio.getSelectionModel().getSelectedItem();
+	@FXML public void atualizarMarcaFreio() {
+		MarcaFreio m = (MarcaFreio)tblMarcaFreio.getSelectionModel().getSelectedItem();
 
 
 		//Main.abrirTela2("lista_tipoFreio");
@@ -57,15 +57,15 @@ public class Visualizar {
 
 		try{
 
-			FXMLLoader loader = new FXMLLoader(Main.class.getResource("modal_tipoFreio.fxml"));
+			FXMLLoader loader = new FXMLLoader(Main.class.getResource("modal_marcaFreio.fxml"));
 
 
 			//carregar o arquivo XML
 			tela = loader.load();
 
 
-			CadastroTipoFreio controller = new CadastroTipoFreio();
-			controller.tipoFreioAtualizar=f;
+			CadastroMarcaFreio controller = new CadastroMarcaFreio();
+			controller.marcaFreioAtualizar=m;
 
 			loader.setController(controller);
 
@@ -81,9 +81,10 @@ public class Visualizar {
 			ex.printStackTrace();
 		}
 
+
 	}
 
-	@FXML public void cadastrar() {
+	@FXML public void cadastrarMarcaFreio() {
 
 		Stage primaryStage = new Stage();
 		//Abrir tela:
@@ -92,7 +93,7 @@ public class Visualizar {
 		try{
 
 			//carregar o arquivo XML
-			tela = FXMLLoader.load(Main.class.getResource("modal_tipoFreio.fxml"));
+			tela = FXMLLoader.load(Main.class.getResource("modal_marcaFreio.fxml"));
 
 			//Criando a cena
 			Scene sc = new Scene(tela);

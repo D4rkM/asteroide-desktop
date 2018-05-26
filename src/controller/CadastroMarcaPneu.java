@@ -5,11 +5,11 @@ import javafx.scene.control.TextField;
 import models.CadastroDAO;
 import view.Main;
 
-public class CadastroTipoFreio {
+public class CadastroMarcaPneu {
 
-	@FXML TextField txtFreio;
+	@FXML TextField txtMarcaPneu;
 
-	TipoFreio tipoFreioAtualizar;
+	MarcaPneu marcaPneuAtualizar;
 
 
 	private boolean atualizacao=false;
@@ -17,15 +17,9 @@ public class CadastroTipoFreio {
 	CadastroDAO dao = new CadastroDAO();
 
 	public void initialize() {
-
-
-
-		if(tipoFreioAtualizar != null) {
-			txtFreio.setText(tipoFreioAtualizar.getTxtfreio());
+		if(marcaPneuAtualizar != null) {
+			txtMarcaPneu.setText(marcaPneuAtualizar.getMarcaPneu());
 			atualizacao = true;
-
-			System.out.println("txtFreio: "+ tipoFreioAtualizar.getTxtfreio());
-
 		}
 
 	}
@@ -35,13 +29,13 @@ public class CadastroTipoFreio {
 	@FXML public void inserir(){
 
 		if(atualizacao) {
-			tipoFreioAtualizar.setTxtfreio(txtFreio.getText());
+			marcaPneuAtualizar.setMarcaPneu(txtMarcaPneu.getText());
 
-			dao.atualizar(tipoFreioAtualizar);
+			dao.atualizarMarcaPneu(marcaPneuAtualizar);
 
-		}else{TipoFreio tipo = new TipoFreio();
+		}else{MarcaPneu tipo = new MarcaPneu();
 
-		tipo.setTxtfreio(txtFreio.getText());
+		tipo.setMarcaPneu(txtMarcaPneu.getText());
 
 		dao.inserir(tipo);
 		limpar();
@@ -54,7 +48,7 @@ public class CadastroTipoFreio {
 	}
 
 	private void limpar() {
-		txtFreio.setText("");
+		txtMarcaPneu.setText("");
 	}
 
 }

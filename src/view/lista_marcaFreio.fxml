@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="300.0" minWidth="300.0" prefHeight="600.0" prefWidth="836.0" style="-fx-background-color: #1f405e;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.VisualizarMarcaFreio">
+   <children>
+      <Label layoutX="312.0" layoutY="28.0" text="Lista de marcas dos freios" textFill="#ededed">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Button layoutX="263.0" layoutY="549.0" mnemonicParsing="false" onAction="#cadastrarMarcaFreio" prefHeight="25.0" prefWidth="75.0" text="Cadastrar" />
+      <Button layoutX="503.0" layoutY="549.0" mnemonicParsing="false" onAction="#deletarMarcaFreio" text="Deletar" />
+      <TableView fx:id="tblMarcaFreio" layoutX="262.0" layoutY="86.0" prefHeight="450.0" prefWidth="373.0">
+        <columns>
+            <TableColumn fx:id="colunaID" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="colunaMarcaFreio" prefWidth="295.0" text="Tipo " />
+        </columns>
+      </TableView>
+      <Button layoutX="572.0" layoutY="549.0" mnemonicParsing="false" onAction="#atualizarMarcaFreio" text="Atualizar" />
+   </children>
+</AnchorPane>

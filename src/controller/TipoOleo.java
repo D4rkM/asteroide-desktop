@@ -4,6 +4,7 @@ public class TipoOleo {
 
 	private int id;
 	private String txtOleo;
+	
 	public int getId() {
 		return id;
 	}

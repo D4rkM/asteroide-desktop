@@ -14,39 +14,47 @@ import javafx.stage.Stage;
 import models.CadastroDAO;
 import view.Main;
 
-public class Visualizar {
+public class VisualizarTipoOleo {
 
 	@FXML TableColumn colunaID;
-	@FXML TableColumn colunaTipoFreio;
-	@FXML TableView tblTipoFreio;
+	@FXML TableColumn colunaTipoOleo;
+	@FXML TableView tblTipoOleo;
 
 	CadastroDAO dao;
 
-	public void initialize() {
+	public void initialize(){
 
-	dao = new CadastroDAO();
+		dao = new CadastroDAO();
 
-	colunaID.setCellValueFactory(new PropertyValueFactory<TipoFreio, Integer>("id"));
-	colunaTipoFreio.setCellValueFactory(new PropertyValueFactory<TipoFreio, String>("txtfreio"));
+		colunaID.setCellValueFactory(new PropertyValueFactory<TipoOleo, Integer>("id"));
+		colunaTipoOleo.setCellValueFactory(new PropertyValueFactory<TipoOleo, String>("txtOleo"));
 
-	ArrayList<TipoFreio> lstTipoFreio = dao.obterTodos();
 
-	tblTipoFreio.setItems(FXCollections.observableArrayList(lstTipoFreio));
 
-	System.out.println("Inicialização");
+		ArrayList<TipoOleo> lstTipoOleo = dao.obterTodos1();
 
+		tblTipoOleo.setItems(
+				FXCollections.observableArrayList(lstTipoOleo)
+				);
+
+
+		System.out.println("inicialização ");
 	}
 
+	@FXML public void deletarTipoOleo() {
 
-	@FXML public void deletar () {
-		TipoFreio f = (TipoFreio)tblTipoFreio.getSelectionModel().getSelectedItem();
-		dao.deletar(f.getId());
 
-		tblTipoFreio.getItems().remove(f);
+		TipoOleo t = (TipoOleo)tblTipoOleo.getSelectionModel().getSelectedItem();
+		dao.deletarTipoOleo(t.getId());
+
+		//tirando da tela
+		tblTipoOleo.getItems().remove(t);
+
+
 	}
 
 	@FXML public void atualizar() {
-		TipoFreio f = (TipoFreio)tblTipoFreio.getSelectionModel().getSelectedItem();
+		TipoOleo t = (TipoOleo)tblTipoOleo.getSelectionModel().getSelectedItem();
 
 
 		//Main.abrirTela2("lista_tipoFreio");
@@ -57,15 +65,15 @@ public class Visualizar {
 
 		try{
 
-			FXMLLoader loader = new FXMLLoader(Main.class.getResource("modal_tipoFreio.fxml"));
+			FXMLLoader loader = new FXMLLoader(Main.class.getResource("modal_tipoOleo.fxml"));
 
 
 			//carregar o arquivo XML
 			tela = loader.load();
 
 
-			CadastroTipoFreio controller = new CadastroTipoFreio();
-			controller.tipoFreioAtualizar=f;
+			CadastroTipoOleo controller = new CadastroTipoOleo();
+			controller.oleoAtualizar=t;
 
 			loader.setController(controller);
 
@@ -81,6 +89,7 @@ public class Visualizar {
 			ex.printStackTrace();
 		}
 
+
 	}
 
 	@FXML public void cadastrar() {
@@ -92,7 +101,7 @@ public class Visualizar {
 		try{
 
 			//carregar o arquivo XML
-			tela = FXMLLoader.load(Main.class.getResource("modal_tipoFreio.fxml"));
+			tela = FXMLLoader.load(Main.class.getResource("modal_tipoOleo.fxml"));
 
 			//Criando a cena
 			Scene sc = new Scene(tela);
@@ -106,7 +115,10 @@ public class Visualizar {
 		}
 	}
 
+
+
 	@FXML public void voltar() {
+
 		Main.abrirTela("Main");
 	}
 

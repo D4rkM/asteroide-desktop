@@ -55,7 +55,7 @@ public class CadastroOnibus {
 			o.setTxtKmRodado(txtKmRodado.getText());
 			o.setTxtKmManutencao(txtKmManutencao.getText());
 
-			dao.inserir(o);
+		//	dao.inserir(o);
 
 
 
