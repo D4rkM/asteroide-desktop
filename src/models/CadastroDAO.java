@@ -3,6 +3,7 @@ package models;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 import controller.CadastroUsuario;
@@ -14,6 +15,8 @@ import controller.Onibus;
 import controller.TipoFreio;
 import controller.TipoOleo;
 import controller.TipoPneu;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 
 public class CadastroDAO {
 
@@ -848,7 +851,7 @@ public class CadastroDAO {
 	//Efetua o select no banco
 	public ArrayList<Classe> obterTodos6(){
 
-		ArrayList<Classe> classe_tipo=  new ArrayList<>();
+		ArrayList<Classe> classe_tipo = new ArrayList<>();
 
 
 		String SQL ="select * from classe;";
@@ -864,7 +867,7 @@ public class CadastroDAO {
 				Classe tipo = new Classe();
 				tipo.setId(rs.getInt("id"));
 				tipo.setClasse(rs.getString("tipo_classe"));
-				tipo.setDesc(rs.getString("txtDesc"));
+				tipo.setDesc(rs.getString("descricao"));
 
 
 				classe_tipo.add(tipo);
@@ -943,7 +946,7 @@ public class CadastroDAO {
 			try{
 				PreparedStatement ps = con.prepareStatement(sql);
 				ps.setString(1, classe.getClasse());
-				ps.setString(1, classe.getDesc());
+				ps.setString(2, classe.getDesc());
 
 
 				int rowsInserted = ps.executeUpdate();
@@ -976,8 +979,58 @@ public class CadastroDAO {
 		return false;
 	}
 
-/***************************************************************/
+	public static com.mysql.jdbc.Connection connect() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
+/***************************************************************/
+/*************************Parte de controle de manutenção*******************************/
+
+	/*private ObservableList<String> listaPlaca = FXCollections.observableArrayList();
+
+    public void initialize() {
+    //
+    String sqlStationName = " select * from tipo_oleo ";
+
+    try {
+        con = (Connection)con.prepareStatement(null) ;
+        PreparedStatement ps = con.prepareStatement(sqlStationName);
+        ResultSet rs = ps.executeQuery(sqlStationName);
+
+        while (rs.next()) {
+
+        	listaPlaca.add(rs.getString("tipo_oleo"));
+
+        }
+
+        rs.close();
+        ps.close();
+        con.close();
+
+    } catch (SQLException ex) {
+        System.err.println("ERR" + ex);
+    }*/
+/*
+	private void combo(){
+		try{
+			String sql = "select * from tipo_oleo";
+			PreparedStatement ps = con.prepareStatement(sql);
+			ResultSet rs = ps.executeQuery();
+
+			while(rs.next()){
+				String name = rs.getString("tipo_oleo");
+				cbPlaca.addItem(lista_placa);
+			}
+
+
+		}catch(Exception ex){
+			ex.printStackTrace();
+		}
+
+}
+*/
+	/**********************************************/
 
 }
 

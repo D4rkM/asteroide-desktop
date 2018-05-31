@@ -30,7 +30,7 @@ public class Main extends Application {
 	public void start(Stage primaryStage) {
 
 		Main.primaryStage = primaryStage;
-		abrirTela("login");
+		abrirTela("cadastro_onibus");
 
 	}
 

@@ -51,8 +51,9 @@
                      <children>
                         <VBox>
                            <children>
+                              <Button mnemonicParsing="false" onMouseClicked="#chama8" prefHeight="25.0" prefWidth="201.0" text="Manutenção onibus" />
                               <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="204.0" text="Lista de onibus" />
-                              <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="201.0" text="Cadastrar classe" />
+                              <Button mnemonicParsing="false" onMouseClicked="#chama9" prefHeight="25.0" prefWidth="201.0" text="Cadastrar classe" />
                            </children>
                         </VBox>
                      </children>

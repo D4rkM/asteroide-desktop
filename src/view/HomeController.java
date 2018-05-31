@@ -51,6 +51,21 @@ public class HomeController {
 		public void chama7(MouseEvent event) {
 			loadChama("lista_usuarios");
 		}
+	 @FXML
+		public void chama8(MouseEvent event) {
+			loadChama("controle_manutencao");
+		}
+
+	 @FXML
+		public void chama9(MouseEvent event) {
+			loadChama("lista_classes");
+		}
+
+	 @FXML
+		public void chama10(MouseEvent event) {
+			loadChama("lista_onibus");
+		}
+
 
 	public  void loadChama(String chama){
 

@@ -26,8 +26,8 @@ public class VisualizarClasse {
 
 		dao = new CadastroDAO();
 
-		colunaTipoClasse.setCellValueFactory(new PropertyValueFactory<Classe, Integer>("classe"));
-		colunaDescricao.setCellValueFactory(new PropertyValueFactory<Classe, String>("descricao"));
+		colunaTipoClasse.setCellValueFactory(new PropertyValueFactory<Classe, Integer>("Classe"));
+		colunaDescricao.setCellValueFactory(new PropertyValueFactory<Classe, String>("Desc"));
 
 		ArrayList<Classe> lstClasse = dao.obterTodos6();
 
@@ -74,6 +74,33 @@ public class VisualizarClasse {
 		}
 
 
+	}
+
+	@FXML public void cadastrarClasse() {
+
+		Stage primaryStage = new Stage();
+		//Abrir tela:
+		Parent tela;
+
+		try{
+
+			//carregar o arquivo XML
+			tela = FXMLLoader.load(Main.class.getResource("modal_cadastroClasse.fxml"));
+
+			//Criando a cena
+			Scene sc = new Scene(tela);
+
+			//Exibindo a cena no stage principal
+			primaryStage.setScene(sc);
+			primaryStage.show();
+
+		}catch(Exception ex){
+			ex.printStackTrace();
+		}
+	}
+
+	@FXML public void voltar() {
+		Main.abrirTela("Main");
 	}
 
 }

@@ -47,14 +47,14 @@ public class CadastroOnibus {
 
 
 		}else {*/
-
+/*
 			Onibus o = new Onibus();
 			o.setTxtPlaca(txtPlaca.getText());
 			o.setTxtDesc(txtDesc.getText());
 			o.setTxtModelo(txtModelo.getText());
 			o.setTxtKmRodado(txtKmRodado.getText());
 			o.setTxtKmManutencao(txtKmManutencao.getText());
-
+*/
 		//	dao.inserir(o);
 
 
