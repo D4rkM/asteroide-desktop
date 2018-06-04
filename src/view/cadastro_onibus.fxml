@@ -7,48 +7,48 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="811.0" maxWidth="1251.0" minHeight="300.0" minWidth="300.0" prefHeight="656.0" prefWidth="678.0" style="-fx-background-color: #1f405e;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlller.CadastroOnibus">
+<AnchorPane maxHeight="811.0" maxWidth="1251.0" minHeight="300.0" minWidth="300.0" prefHeight="581.0" prefWidth="639.0" style="-fx-background-color: #1f405e;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CadastroOnibus">
    <children>
-      <Label layoutX="171.0" layoutY="136.0" prefHeight="20.0" prefWidth="106.0" text="Placa do ônibus:" textFill="WHITE">
+      <Label layoutX="280.0" layoutY="121.0" prefHeight="20.0" prefWidth="106.0" text="Placa do ônibus:" textFill="WHITE">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <TextField fx:id="txtPlaca" layoutX="171.0" layoutY="178.0" prefHeight="25.0" prefWidth="198.0" promptText="XXX-XXXX" />
-      <Label layoutX="430.0" layoutY="136.0" text="Quantidade de poltronas:" textFill="WHITE">
+      <TextField fx:id="txtPlaca" layoutX="234.0" layoutY="152.0" prefHeight="25.0" prefWidth="198.0" promptText="XXX-XXXX" />
+      <Label layoutX="254.0" layoutY="191.0" text="Quantidade de poltronas:" textFill="WHITE">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <ComboBox fx:id="cbPoltronas" layoutX="434.0" layoutY="178.0" prefWidth="150.0" />
-      <Label layoutX="171.0" layoutY="236.0" text="Km rodado:" textFill="WHITE">
+      <Label layoutX="297.0" layoutY="271.0" text="Km rodado:" textFill="WHITE">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <TextField fx:id="txtKmRodado" layoutX="171.0" layoutY="286.0" prefHeight="25.0" prefWidth="162.0" />
-      <Label layoutX="441.0" layoutY="246.0" text="Classe:" textFill="WHITE">
+      <TextField fx:id="txtKmRodado" layoutX="234.0" layoutY="310.0" prefHeight="25.0" prefWidth="198.0" />
+      <Label layoutX="312.0" layoutY="346.0" text="Classe:" textFill="WHITE">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <ComboBox fx:id="cbClasse" layoutX="441.0" layoutY="299.0" prefHeight="25.0" prefWidth="121.0" />
-      <TextField fx:id="txtCodigo" layoutX="171.0" layoutY="386.0" prefHeight="25.0" prefWidth="162.0" />
-      <Label layoutX="172.0" layoutY="339.0" text="Codigo " textFill="WHITE">
+      <ComboBox fx:id="cmbClasse" layoutX="236.0" layoutY="385.0" prefHeight="25.0" prefWidth="198.0" />
+      <TextField fx:id="txtCodigo" layoutX="231.0" layoutY="74.0" prefHeight="25.0" prefWidth="198.0" />
+      <Label layoutX="309.0" layoutY="30.0" text="Codigo " textFill="WHITE">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <Button layoutX="339.0" layoutY="467.0" mnemonicParsing="false" text="Cadastrar">
+      <Button layoutX="292.0" layoutY="537.0" mnemonicParsing="false" onAction="#inserir" text="Cadastrar">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Button>
-      <Label layoutX="441.0" layoutY="349.0" text="Status onibus" textFill="WHITE">
+      <Label layoutX="296.0" layoutY="438.0" text="Status onibus" textFill="WHITE">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <ComboBox fx:id="cbOnibus" layoutX="441.0" layoutY="389.0" prefHeight="25.0" prefWidth="121.0" />
+      <ComboBox fx:id="cmbStatus" layoutX="239.0" layoutY="478.0" prefHeight="25.0" prefWidth="198.0" />
+      <TextField fx:id="txtPoltrona" layoutX="235.0" layoutY="228.0" prefHeight="25.0" prefWidth="198.0" />
    </children>
 </AnchorPane>

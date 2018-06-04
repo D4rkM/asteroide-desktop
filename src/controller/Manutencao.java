@@ -10,6 +10,7 @@ public class Manutencao {
 	private ComboBox<CadastroManutencao> cbTipoOleo;
 	private ComboBox<CadastroManutencao> cbTipoPneu;
 	private ComboBox<CadastroManutencao> cbMarcaPneu;
+	
 	public int getId() {
 		return id;
 	}

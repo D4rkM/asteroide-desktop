@@ -601,9 +601,10 @@ public class CadastroDAO {
 
 			while(rs.next()){
 
-				MarcaOleo marca = new MarcaOleo();
+				MarcaOleo marca = new MarcaOleo(SQL);
 				marca.setId(rs.getInt("id"));
 				marca.setMarcaOleo(rs.getString("marca"));
+			
 
 
 				marca_oleo.add(marca);
@@ -634,7 +635,7 @@ public class CadastroDAO {
 
 			while(rs.next()){
 
-				marca = new MarcaOleo();
+				marca = new MarcaOleo(SQL);
 				marca.setMarcaOleo(rs.getString("marca"));
 
 
@@ -1031,6 +1032,32 @@ public class CadastroDAO {
 }
 */
 	/**********************************************/
+	public void inserir(Onibus...onibus){
 
+		for (Onibus Cadonibus : onibus){
+
+			String sql = "INSERT INTO onibus set poltronas=?,km_rodado=?,id_classe=?, placa=?, status_onibus_id= ?, cod_antt=?;";
+
+			try{
+				PreparedStatement ps = con.prepareStatement(sql);
+				ps.setString(1, Cadonibus.getTxtPoltrona());
+				ps.setString(2, Cadonibus.getTxtKmRodado());
+				ps.setInt(3, Cadonibus.getId());
+				ps.setString(4, Cadonibus.getTxtPlaca());
+				ps.setInt(5, Cadonibus.getId());
+				ps.setString(6, Cadonibus.getTxtCodigo());
+				
+				
+
+				int rowsInserted = ps.executeUpdate();
+				if (rowsInserted > 1) {
+				    System.out.println("Inserido com sucesso");
+				}
+			}catch(Exception ex){
+				ex.printStackTrace();
+			}
+		}
+
+	}
 }
 
