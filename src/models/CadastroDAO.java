@@ -11,7 +11,7 @@ import controller.Classe;
 import controller.MarcaFreio;
 import controller.MarcaOleo;
 import controller.MarcaPneu;
-import controller.Onibus;
+//import controller.Onibus;
 import controller.TipoFreio;
 import controller.TipoOleo;
 import controller.TipoPneu;
@@ -40,20 +40,13 @@ public class CadastroDAO {
     		st.setString(2, senha);
 
     		ResultSet rs = st.executeQuery();
-    		//String sql2 ="select @_idFuncionario as idFuncionario;";
-
-
-
-    		//ResultSet rs2 =executeQuery(sql2);
-
+    
     		while(rs.next()){
 
     			Usuario u = new Usuario();
 
     			u.setIdFuncionario(rs.getInt("id"));
-    			//idFuncionario = (rs.getInt(idFuncionario));
-
-
+    		
     			verifica = true;
     		}
 
@@ -986,78 +979,7 @@ public class CadastroDAO {
 	}
 
 /***************************************************************/
-/*************************Parte de controle de manutenção*******************************/
-
-	/*private ObservableList<String> listaPlaca = FXCollections.observableArrayList();
-
-    public void initialize() {
-    //
-    String sqlStationName = " select * from tipo_oleo ";
-
-    try {
-        con = (Connection)con.prepareStatement(null) ;
-        PreparedStatement ps = con.prepareStatement(sqlStationName);
-        ResultSet rs = ps.executeQuery(sqlStationName);
-
-        while (rs.next()) {
-
-        	listaPlaca.add(rs.getString("tipo_oleo"));
-
-        }
-
-        rs.close();
-        ps.close();
-        con.close();
-
-    } catch (SQLException ex) {
-        System.err.println("ERR" + ex);
-    }*/
-/*
-	private void combo(){
-		try{
-			String sql = "select * from tipo_oleo";
-			PreparedStatement ps = con.prepareStatement(sql);
-			ResultSet rs = ps.executeQuery();
-
-			while(rs.next()){
-				String name = rs.getString("tipo_oleo");
-				cbPlaca.addItem(lista_placa);
-			}
 
 
-		}catch(Exception ex){
-			ex.printStackTrace();
-		}
-
-}
-*/
-	/**********************************************/
-	public void inserir(Onibus...onibus){
-
-		for (Onibus Cadonibus : onibus){
-
-			String sql = "INSERT INTO onibus set poltronas=?,km_rodado=?,id_classe=?, placa=?, status_onibus_id= ?, cod_antt=?;";
-
-			try{
-				PreparedStatement ps = con.prepareStatement(sql);
-				ps.setString(1, Cadonibus.getTxtPoltrona());
-				ps.setString(2, Cadonibus.getTxtKmRodado());
-				ps.setInt(3, Cadonibus.getId());
-				ps.setString(4, Cadonibus.getTxtPlaca());
-				ps.setInt(5, Cadonibus.getId());
-				ps.setString(6, Cadonibus.getTxtCodigo());
-				
-				
-
-				int rowsInserted = ps.executeUpdate();
-				if (rowsInserted > 1) {
-				    System.out.println("Inserido com sucesso");
-				}
-			}catch(Exception ex){
-				ex.printStackTrace();
-			}
-		}
-
-	}
 }
 

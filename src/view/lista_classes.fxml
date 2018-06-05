@@ -15,13 +15,13 @@
          </font>
       </Label>
       <Button layoutX="263.0" layoutY="549.0" mnemonicParsing="false" onAction="#cadastrarClasse" prefHeight="25.0" prefWidth="75.0" text="Cadastrar" />
-      <Button layoutX="510.0" layoutY="549.0" mnemonicParsing="false" onAction="#deletarClasse" text="Deletar" />
-      <TableView fx:id="tblListaClasse" layoutX="262.0" layoutY="86.0" prefHeight="450.0" prefWidth="373.0">
+      <Button layoutX="586.0" layoutY="549.0" mnemonicParsing="false" onAction="#deletarClasse" text="Deletar" />
+      <TableView fx:id="tblListaClasse" layoutX="262.0" layoutY="86.0" prefHeight="450.0" prefWidth="451.0">
         <columns>
             <TableColumn fx:id="colunaTipoClasse" prefWidth="119.0" text="Tipo da classe " />
-          <TableColumn fx:id="colunaDescricao" prefWidth="251.0" text="Descrição" />
+          <TableColumn fx:id="colunaDescricao" prefWidth="331.0" text="Descrição" />
         </columns>
       </TableView>
-      <Button layoutX="572.0" layoutY="549.0" mnemonicParsing="false" onAction="#atualizarClasse" text="Atualizar" />
+      <Button layoutX="650.0" layoutY="549.0" mnemonicParsing="false" onAction="#atualizarClasse" text="Atualizar" />
    </children>
 </AnchorPane>

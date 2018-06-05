@@ -10,7 +10,7 @@ import javafx.collections.ObservableList;
 
 public class Classe {
 
-	private int id;
+	private static int id;
 	private String Classe;
 	private String Desc;
 
@@ -22,7 +22,7 @@ public class Classe {
 		
 	}
 	
-	public int getId() {
+	public static int getId() {
 		return id;
 	}
 	public void setId(int id) {

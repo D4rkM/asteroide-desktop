@@ -38,7 +38,7 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <Button layoutX="292.0" layoutY="537.0" mnemonicParsing="false" onAction="#inserir" text="Cadastrar">
+      <Button layoutX="292.0" layoutY="537.0" mnemonicParsing="false" onAction="#guardarRegistro" text="Cadastrar">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>

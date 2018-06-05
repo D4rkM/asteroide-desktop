@@ -11,7 +11,7 @@ import javafx.collections.ObservableList;
 
 public class Status {
 	
-	private int id;
+	private static int id;
 	private String Status;
 	
 	
@@ -22,7 +22,7 @@ public class Status {
 	
 	public Status() {}
 	
-	public int getId() {
+	public static int getId() {
 		return id;
 	}
 	public void setId(int id) {
